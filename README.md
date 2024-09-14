@@ -31,6 +31,12 @@ Your Python is way better than your PHP.
 [A really simple blog / instructionables list](https://www.csanim.com/) | [A personal site](https://www.mahnamahna.net/) | [An event/festival](https://www.jazzfestival.nz/) | 
 [A University site](https://www.utas.edu.au/) | [A big org site](https://www.jpl.nasa.gov/)
 
+## Install
 
+Once you are at [Wagtail CMS official website](https://wagtail.org/), don't do 'pip install wagtail' right away. Instead
+
+1. Check what you've got on your system
+2. Check [the compatibility table](https://docs.wagtail.org/en/stable/releases/upgrading.html#compatible-django-python-versions)
+3. Install missing parts either  to your system global env, or to your Python virtual env
 
 
