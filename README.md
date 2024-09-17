@@ -49,6 +49,28 @@ Once you are at [Wagtail CMS official website](https://wagtail.org/), don't do '
 
    python 3.11, sqlite 3.26, wagtail 5.1.3 - somewhat better, yet, the choice is limited by the sqlite.
 
-3. Install missing parts either to your system global env, or to your Python virtual env
+   wagtail 6.2 requires sqlite 3.27 instead of the present 3.26 at Rocky 9. Only available install is from source. Requires rebuild of Python
+
+3. Install dependencies - you'll see them when you start installing
+
+   E.g.:
+   ```
+   $ python3 -m venv wt00
+   $ source ./wt00/bin/activate
+   $ pip3 install wagtail
+    The headers or library files could not be found for jpeg,
+    a required dependency when compiling Pillow from source.
+    
+    Please see the install instructions at:
+       https://pillow.readthedocs.io/en/latest/installation.html
+   ```
+
+5. Install steps as experienced on vanilla official Rocky 9 image
+```
+  sudo dnf install -y python3-devel
+  sudo dnf install -y libjpeg-turbo-devel
+  source ./wt00/bin/activate # you can change the wt00 to match _your_ application
+  pip3 install wagtail # Note: "WARNING: You are using pip version ..." is Ok, up to you to upgrade pip
+```
 
 
