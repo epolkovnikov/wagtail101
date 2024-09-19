@@ -9,6 +9,8 @@ I'd say yes, it is a great "here is your box of parts, go assemble a CMS yoursel
 
 If you expect install and run, - no it is not the case.
 
+Read [The Zen of Wagtail](https://docs.wagtail.org/en/stable/getting_started/the_zen_of_wagtail.html) to get it from the authors.
+
 ## Why Wagtail?
 
 It is free and Open Source.
@@ -45,13 +47,17 @@ Once you are at [Wagtail CMS official website](https://wagtail.org/), don't do '
    
    python==3.6, sqlite 3.26, wagtail 2.15.6 - quite old
 
+   Note: While upgrade of Python is possible there wagtail 6.2 requires sqlite 3.27. Rocky 8 system has sqlite 3.26. Only available install is from source. And then requires rebuild of Python. So...
+
    On Rocky 9:
 
-   python 3.11, sqlite 3.26, wagtail 5.1.3 - somewhat better, yet, the choice is limited by the sqlite.
+   python 3.11, sqlite-libs 3.34, wagtail 6.2.1 - somewhat better, yet, the choice is limited by the sqlite.
+   
+3. Pull instructions and docs for the right version!
 
-   wagtail 6.2 requires sqlite 3.27 instead of the present 3.26 at Rocky 9. Only available install is from source. Requires rebuild of Python
+   In our case with our Rocky9 - [https://docs.wagtail.org/en/v6.2.1/](https://docs.wagtail.org/en/v6.2.1/)
 
-3. Install dependencies - you'll see them when you start installing
+4. Install dependencies - you'll see them when you start installing
 
    E.g.:
    ```
@@ -70,6 +76,7 @@ Once you are at [Wagtail CMS official website](https://wagtail.org/), don't do '
   sudo dnf install -y python3-devel
   sudo dnf install -y libjpeg-turbo-devel
   source ./wt00/bin/activate # you can change the wt00 to match _your_ application
+  cd wt00
   pip3 install wagtail
 ```
 Example of a successful result:
@@ -79,3 +86,7 @@ WARNING: You are using pip version 21.2.3; however, version 24.2 is available.
 You should consider upgrading via the '/home/rocky9/wt00/bin/python3 -m pip install --upgrade pip' command.
 ```
 Note: "WARNING: You are using pip version ..." is Ok, up to you to upgrade pip
+
+6. Continue with [https://docs.wagtail.org/en/v6.2.1/](https://docs.wagtail.org/en/v6.2.1/)
+
+Once succeeded - you should be able to navigate to the start page, and login to the admin interface. But there is not much fun there (yet).
