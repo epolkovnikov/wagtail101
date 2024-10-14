@@ -57,27 +57,30 @@ Once you are at [Wagtail CMS official website](https://wagtail.org/), don't do '
 
    In our case with our Rocky9 - [https://docs.wagtail.org/en/v6.2.1/](https://docs.wagtail.org/en/v6.2.1/)
 
-4. Install dependencies - you'll see them when you start installing
-
-   E.g.:
-   ```
-   $ python3 -m venv wt00
-   $ source ./wt00/bin/activate
-   $ pip3 install wagtail
-    The headers or library files could not be found for jpeg,
-    a required dependency when compiling Pillow from source.
-    
-    Please see the install instructions at:
-       https://pillow.readthedocs.io/en/latest/installation.html
-   ```
-
-5. Install steps as experienced on vanilla official Rocky 9 image
+4. Install Wagtail dependencies (you may already have them, or Wagtail 6.2.2 is resolving them on its own)
 ```
-  sudo dnf install -y python3-devel
-  sudo dnf install -y libjpeg-turbo-devel
-  source ./wt00/bin/activate # you can change the wt00 to match _your_ application
-  cd wt00
-  pip3 install wagtail
+sudo dnf install -y python3-devel
+sudo dnf install -y libjpeg-turbo-devel
+```
+If you don't have them, you may see the following error on wgatail install on a vanilla Rocky9 image:
+```
+$ pip3 install wagtail
+  The headers or library files could not be found for jpeg,
+  a required dependency when compiling Pillow from source.
+    
+  Please see the install instructions at:
+     https://pillow.readthedocs.io/en/latest/installation.html
+```
+
+5. Install Wagtail in the virtual environment:
+5.1. Create and activate the virtual environment
+```
+source ./wt00/bin/activate # you can change the wt00 to match _your_ application
+cd wt00
+```
+5.2. Install Wagtail (finally :-))
+```
+pip3 install wagtail
 ```
 Example of a successful result:
 ```
@@ -87,6 +90,11 @@ You should consider upgrading via the '/home/rocky9/wt00/bin/python3 -m pip inst
 ```
 Note: "WARNING: You are using pip version ..." is Ok, up to you to upgrade pip
 
-6. Continue with [https://docs.wagtail.org/en/v6.2.1/](https://docs.wagtail.org/en/v6.2.1/)
-
+6. Create the initial website (optional)
+```
+cd wt00/
+wagtail start mysite
+```
 Once succeeded - you should be able to navigate to the start page, and login to the admin interface. But there is not much fun there (yet).
+
+Continue with [Tutorial for Wagtail v6.2.1](https://docs.wagtail.org/en/v6.2.1/getting_started/tutorial.html)
