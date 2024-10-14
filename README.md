@@ -58,11 +58,14 @@ Once you are at [Wagtail CMS official website](https://wagtail.org/), don't do '
    In our case with our Rocky9 - [https://docs.wagtail.org/en/v6.2.1/](https://docs.wagtail.org/en/v6.2.1/)
 
 4. Install Wagtail dependencies (you may already have them, or Wagtail 6.2.2 is resolving them on its own)
+
 ```
 sudo dnf install -y python3-devel
 sudo dnf install -y libjpeg-turbo-devel
 ```
+
 If you don't have them, you may see the following error on wgatail install on a vanilla Rocky9 image:
+
 ```
 $ pip3 install wagtail
   The headers or library files could not be found for jpeg,
@@ -73,12 +76,16 @@ $ pip3 install wagtail
 ```
 
 5. Install Wagtail in the virtual environment:
+   
 5.1. Create and activate the virtual environment
+
 ```
 source ./wt00/bin/activate # you can change the wt00 to match _your_ application
 cd wt00
 ```
+
 5.2. Install Wagtail (finally :-))
+
 ```
 pip3 install wagtail
 ```
@@ -94,7 +101,31 @@ Note: "WARNING: You are using pip version ..." is Ok, up to you to upgrade pip
 ```
 cd wt00/
 wagtail start mysite
+cd mysite
+pip install -r requirements.txt
+python manage.py migrate
+python manage.py createsuperuser
 ```
+Once the admin user is created, we should be able to start the dev service
+```
+python manage.py runserver
+```
+And see the start page at [http://127.0.0.1:8000 ](http://127.0.0.1:8000)
+
 Once succeeded - you should be able to navigate to the start page, and login to the admin interface. But there is not much fun there (yet).
 
 Continue with [Tutorial for Wagtail v6.2.1](https://docs.wagtail.org/en/v6.2.1/getting_started/tutorial.html)
+
+## Presentation example
+
+Install git client:
+```
+sudo dnf install git-core
+```
+
+Copy-over the blog branch mysite to the mysite.
+
+```
+python manage.py makemigrations
+python manage.py migrate
+```
