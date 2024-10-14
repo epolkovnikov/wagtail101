@@ -118,14 +118,22 @@ Continue with [Tutorial for Wagtail v6.2.1](https://docs.wagtail.org/en/v6.2.1/g
 
 ## Presentation example
 
+Simple personal blog with images
+
 Install git client:
 ```
 sudo dnf install git-core
 ```
 
+Checkout the code:
+```
+
+```
 Copy-over the blog branch mysite to the mysite.
 
 ```
 python manage.py makemigrations
 python manage.py migrate
 ```
+
+Canonical example is the [Bakery Shop](https://github.com/wagtail/bakerydemo)
