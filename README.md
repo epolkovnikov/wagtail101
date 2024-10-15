@@ -15,19 +15,23 @@ Read [The Zen of Wagtail](https://docs.wagtail.org/en/stable/getting_started/the
 
 It is free and Open Source.
 
-Building a blog with Django feels like rewriting a WordPress?
+Now answer these questions (at least):
 
-You want your users be completely isolated from the design part of it?
+Are you building a blog web app with Django and it feels like rewriting a WordPress?
 
-You already touched Django and want a boost with pre-built blocks?
+Do uou want your users to be completely isolated from the design part of it?
 
-You have a feature creep and have to integreate something unusual, or have it more like a Web app?
+Have you already touched Django and want a boost with pre-built blocks?
 
-Or you have to give access to your data via an API along the pages?
+Do you have a feature creep and have to integrate something unusual, or have it more like a Web app?
 
-You want to get your hands dirty with code.
+Or do you have to give access to your data via an API along the pages?
 
-Your Python is way better than your PHP.
+Do you want to get your hands dirty with code?
+
+Is your Python skill is way better than your PHP?
+
+If you answer 'yes' - probably Wagtail is for you :-)
 
 ## How Wagtail sites look like?
 [A really simple blog / instructionables list](https://www.csanim.com/) | [A personal site](https://www.mahnamahna.net/) | [An event/festival](https://www.jazzfestival.nz/) | 
