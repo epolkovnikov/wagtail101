@@ -127,10 +127,12 @@ sudo dnf install git-core
 
 Checkout the code:
 ```
-
+git clone https://github.com/epolkovnikov/wagtail101.git -bblog-6.2.1 blog-6.2.1
 ```
-Copy-over the blog branch mysite to the mysite.
 
+Copy-over the blog's branch mysite to the mysite.
+
+Then make and execute migrations:
 ```
 python manage.py makemigrations
 python manage.py migrate
