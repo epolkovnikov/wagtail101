@@ -130,17 +130,27 @@ Install git client:
 sudo dnf install git-core
 ```
 
-Checkout the code:
+Checkout the code (https://github.com/epolkovnikov/wagtail101/tree/blog-6.2.1):
 ```
 git clone https://github.com/epolkovnikov/wagtail101.git -bblog-6.2.1 blog-6.2.1
 ```
+If you are curious - here is the delta between the base and the blog example: https://github.com/epolkovnikov/wagtail101/compare/base-6.2.1...blog-6.2.1
 
-Copy-over the blog's branch mysite to the mysite.
+Copy-over the blog's branch mysite to the Wagtail mysite location.
+One of the ways:
+```
+cp -r blog-6.2.1/mysite/. wt00/mysite/
+```
 
 Then make and execute migrations:
 ```
 python manage.py makemigrations
 python manage.py migrate
 ```
+Once you start your server again
+```
+python manage.py runserver
+```
+The http://127.0.0.1:8000 will have not much. I will post a video next week
 
 Canonical example is the [Bakery Shop](https://github.com/wagtail/bakerydemo)
