@@ -81,9 +81,10 @@ $ pip3 install wagtail
 
 5. Install Wagtail in the virtual environment:
    
-5.1. Create and activate the virtual environment
+5.1. Create and activate the virtual environment (from your home dir, or whatever dev dir):
 
 ```
+python3 -m venv wt00
 source ./wt00/bin/activate # you can change the wt00 to match _your_ application
 cd wt00
 ```
