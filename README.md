@@ -1,5 +1,5 @@
 # wagtail101
-Materials for Wagtail basics; Python meetup presentation
+Materials for Wagtail basics; [Python meetup presentation](https://www.youtube.com/watch?v=ervl4VOW5jM)
 
 ## What is Wagtail?
 
@@ -151,6 +151,6 @@ Once you start your server again
 ```
 python manage.py runserver
 ```
-The http://127.0.0.1:8000 will have not much. I will post a video next week
+The http://127.0.0.1:8000 will have not much. Please see [the manual steps video](https://youtu.be/cOTIN68ACPA) to complete the setup.
 
 Canonical example is the [Bakery Shop](https://github.com/wagtail/bakerydemo)
